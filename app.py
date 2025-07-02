@@ -40,16 +40,31 @@ def main():
         f.write(f"Started @ {td}\n")
         f.write("---------------------------------------\n")
 
+    anomaly_tracker = True
     while 1:
-        mac = get_mac(args.g)
-        td = datetime.datetime.now()
+        current_mac = get_mac(args.g)
+        td = datetime.datetime.now()   
 
+        #log's the entire operation (mac base for now)
         with open("log.txt", "a") as f:
-            f.write(f"{td} | {args.g} @ {mac}\n")
+            f.write(f"{td} | {args.g} @ {current_mac}\n")
         
-        if mac != initial_mac:
+        # create anomaly.txt and logs it
+        if current_mac != initial_mac:
+            if anomaly_tracker:
+                print(f"Gateway's mac address has been change to: {current_mac}")
+                
+                with open("anomaly.txt", "a") as f:
+                    f.write("---------------------------------------\n")
+                    f.write(f"Anomaly started @ {td}\n")
+                    f.write("---------------------------------------\n")
+                
+                anomaly_tracker = False
+
             with open("anomaly.txt", "a") as f:
-                f.write(f"{td} | {args.g} @ {mac}\n")
+                f.write(f"{td} | {args.g} @ {current_mac}\n")
+        else:
+            anomaly_tracker = True
 
 
         time.sleep(int(args.i))
