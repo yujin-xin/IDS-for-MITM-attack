@@ -7,4 +7,4 @@ When an anomaly happens―such as your current device is under eavesdrop―, it 
 run:
 python app.py -g *your LAN's gateway address* -i *interval*
 
-ps: this project is under development. Planning to create a centralized server for monitoring in the feature
+ps: this project is under development. Planning to create a centralized server for monitoring in the future
