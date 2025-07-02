@@ -33,7 +33,7 @@ def main():
 
     initial_mac = get_mac(args.g)
     print("IDS running...")
-    print(f"Your mac is: {initial_mac}")
+    print(f"Gateway's mac: {initial_mac}")
     
     with open("log.txt", "a") as f:
         f.write("---------------------------------------\n")
