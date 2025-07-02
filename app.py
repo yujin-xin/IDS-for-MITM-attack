@@ -31,6 +31,10 @@ def main():
 
     td = datetime.datetime.now()
 
+    initial_mac = get_mac(args.g)
+    print("IDS running...")
+    print(f"Your mac is: {initial_mac}")
+    
     with open("log.txt", "a") as f:
         f.write("---------------------------------------\n")
         f.write(f"Started @ {td}\n")
@@ -38,12 +42,19 @@ def main():
 
     while 1:
         mac = get_mac(args.g)
+        td = datetime.datetime.now()
 
         with open("log.txt", "a") as f:
-            td = datetime.datetime.now()
             f.write(f"{td} | {args.g} @ {mac}\n")
         
+        if mac != initial_mac:
+            with open("anomaly.txt", "a") as f:
+                f.write(f"{td} | {args.g} @ {mac}\n")
+
+
         time.sleep(int(args.i))
+
+
 
 if __name__ == "__main__":
     main()
