@@ -14,6 +14,19 @@ A Python-based, command-line Intrusion Detection tool focused on ARP poisoning d
 * Feeding into larger security monitoring pipelines or SIEM platforms
 * Learning and demonstrating practical LAN-level threat detection in blue team workflows
 
+## Benefits
+* Serves as a practical entry point into network-based threat detection, with a clear focus on LAN-specific attack methods.
+* Reinforces core SOC analyst skills such as passive detection, traffic analysis, and network baseline awareness.
+* Easily extendable to support alerting mechanisms (e.g., syslog, email, or webhook integration) as part of future iterations.
+
+## Technical Stack
+* Networking: TCP/IP stack
+* Language: Python
+* Packet Analysis: scapy-based
+* Logging: Plaintext logs saved locally
+* Platform: Unix/Linux-based systems (root privileges required for packet access)
+* Interface: Command-line
+
 ```bash
 git clone https://github.com/yujin-xin/IDS-for-MITM-attack
 cd IDS-for-MITM-attack
