@@ -1,4 +1,4 @@
-# HostARP Poisoning Detection Logger – Python CLI (IDS)
+# Host-based ARP Poisoning Detection Logger – Python CLI (IDS)
 
 ## Overview
 A Python-based, command-line Intrusion Detection tool focused on ARP poisoning detection within local area networks (LANs). The system monitors the MAC address associated with the default network gateway and logs any changes, helping to identify signs of Man-in-the-Middle (MitM) attacks.
