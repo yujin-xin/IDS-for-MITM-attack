@@ -10,8 +10,6 @@ A Python-based, command-line Intrusion Detection tool focused on ARP poisoning d
 * Lightweight CLI Tool: Runs from the command line with minimal system overhead, making it ideal for background operation on monitoring endpoints or internal hosts.
 
 ## Use Cases
-* Providing evidence of ARP spoofing attempts during internal incident response
-* Feeding into larger security monitoring pipelines or SIEM platforms
 * Learning and demonstrating practical LAN-level threat detection in blue team workflows
 
 ## Benefits
